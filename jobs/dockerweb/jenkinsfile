@@ -34,7 +34,6 @@ pipeline {
             steps {
                 script{
                     sh ''' 
-                    docker-machine regenerate-certs dev
                     docker build    jobs/dockerweb/ -t ${name_imagen}:${tag_imagen}
                     '''
                     }
