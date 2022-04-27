@@ -34,6 +34,7 @@ pipeline {
             steps {
                 script{
                     sh ''' 
+                    sudo usermod -aG docker jenkins
                     docker build    jobs/dockerweb/ -t ${name_imagen}:${tag_imagen}
                     '''
                     }
