@@ -8,7 +8,8 @@ pipeline {
         stage ('Creando Usuario') {
             steps {
                         script {
-                           sh  "useradd -d /home/$USUARIO  -m -p \$(echo '$PASSWORD' | openssl passwd -1 -stdin) $USUARIO"
+                           sh "whoami"
+                            sh  "useradd -d /home/$USUARIO  -m -p \$(echo '$PASSWORD' | openssl passwd -1 -stdin) $USUARIO"
                     }
                 
             }
